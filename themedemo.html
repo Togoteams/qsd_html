@@ -1,129 +1,46 @@
 <html>
-   <head>
-      <title>QuickAppz</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="assets/fontawesome/css/all.css" rel="stylesheet" type="text/css">
-      <link href="assets/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="assets/bootstrap-5.2.1-dist/css/select2.min.css">
-      <script src="assets/bootstrap-5.2.1-dist/js/jquery 3.6.1.min.js" type="text/javascript"></script>
-      <script src="assets/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
-      <link rel="stylesheet" href="theme1_1.css">
-      <style>
-         @media (min-width: 768px) {
-         #carousel .carousel-item {
-         margin-right: 0;
-         flex: 0 0 33.33%;
-         display: grid;
-         padding: 0 15px 0 15px;
-         }
-         .carousel-inner {
-         display: flex;
-         }
-         }
-         .navbar{
-         color: #fff;
-         }
-         .sidebar {
-         background: #fff;
-         color: #000;
-         transition: all 0.3s;
-         position: sticky;
-         top: 56px;
-         width: 100%;
-         }
-         .sidebar.active {
-         margin-left: -250px;
-         }
-         .sidebar .sidebar-header {
-         padding: 20px;
-         background: #fff;
-         }
-         .sidebar ul.components {
-         padding: 20px 0;
-         border-bottom: 1px solid #47748b;
-         }
-         .sidebar ul p {
-         color: #000;
-         padding: 10px;
-         }
-         .sidebar ul li a {
-         padding: 10px;
-         font-size: 1.1em;
-         display: block;
-         text-decoration: none;
-         /* color: #000; */
-         }
-         .sidebar ul li a:hover {
-         color: #fff;
-         background: #000;
-         }
-         .sidebar ul li.active>a,
-         .sidebar a[aria-expanded="true"] {
-         color: #fff;
-         background: #000;
-         }
-         a[data-toggle="collapse"] {
-         position: relative;
-         }
-         .sidebar .dropdown-toggle::after {
-         display: block;
-         position: absolute;
-         padding-bottom: 20px;
-         right: 20px;
-         transform: translateY(-50%);
-         }
-         ul ul a {
-         font-size: 0.9em !important;
-         padding-left: 30px !important;
-         background: #fff;
-         }
-         ul ul ul a {
-         font-size: 0.9em !important;
-         padding-left: 50px !important;
-         background: #fff;
-         }
-         ul.CTAs {
-         padding: 20px;
-         }
-         ul.CTAs a {
-         text-align: center;
-         font-size: 0.9em !important;
-         display: block;
-         border-radius: 5px;
-         margin-bottom: 5px;
-         }
-         #dvwrapper { display: flex; }
-         #sidebarleft { min-width: 200px;max-width: 250px;position: sticky;transition: all 0.3s; }
-         #sidebarCollapseLeft { margin-left:0px; }    
-         @media only screen and (max-width: 600px) {
-         }
-         @media only screen and (min-width: 601px) and (max-width: 768px)  {
-         } 
-         @media only screen and (min-width: 769px) and (max-width: 992px) {
-         }
-      </style>
-   </head>
-   <body>
-      <header class="section-header sticky-top">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-            <div class="container-fluid">
-               <a class="navbar-brand" href="#" style=" opacity: .75;
+
+<head>
+   <title>QuickAppz</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="assets/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+   <link href="assets/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="assets/bootstrap-5.2.1-dist/css/select2.min.css">
+   <script src="assets/bootstrap-5.2.1-dist/js/jquery 3.6.1.min.js" type="text/javascript"></script>
+   <script src="assets/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="theme1_1.css">
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+</head>
+
+<body>
+   <header class="section-header sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#" style=" opacity: .75;
                   padding-top: 0.425rem;
                   padding-bottom: 0.425rem;
                   margin-right: 1rem;
                   font-size: 1.1rem;
-                  white-space: nowrap;"> 
-               <img src="images/LogoSmall.png" height="40" class="logo"> 
+                  white-space: nowrap;">
+               <img src="images/LogoSmall.png" height="40" class="logo">
                <strong>QuickAppz</strong></a>
-               <button type="button" id="sidebarCollapseLeft" class="btn btn-primary pull-left" onclick="ToggleLeftSideBar();">
-               <span id="SPAN">Toggle Sidebar</span>
-               </button>
-               <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_main1" aria-label="Toggle navigation" aria-expanded="false" style="color: #212529; border-color: rgba(0,0,0,.1);padding: 0.35rem 0.5rem; font-size: 1.1rem;line-height: 1; background-color: transparent; border: 1px solid transparent; border-radius: 0.35rem; transition: box-shadow .15s ease-in-out;"> 
-               <span class="navbar-toggler-icon"></span> 
-               </button> 
-               <div class="navbar-collapse collapse" id="navbar_main1" style="">
-                  <ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
+            <button type="button" id="sidebarCollapseLeft" class=" pull-left toggle-btn" onclick="ToggleLeftSideBar();">
+               <span id="SPAN"><i class="fa fa-bars" aria-hidden="true"></i>
+               </span>
+            </button>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbar_main1" aria-label="Toggle navigation" aria-expanded="false"
+               style="color: #212529; border-color: rgba(0,0,0,.1);padding: 0.35rem 0.5rem; font-size: 1.1rem;line-height: 1; background-color: transparent; border: 1px solid transparent; border-radius: 0.35rem; transition: box-shadow .15s ease-in-out;">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar_main1">
+               <!-- <ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
                      <li class="nav-item me-2 active"> 
                         <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span>
                         </a> 
@@ -143,54 +60,95 @@
                      <li class="nav-item me-2">
                         <a class="nav-link" href="#" >Contacts</a> 
                      </li>
-                  </ul>
-                  <ul class="navbar-nav">
-                     <li class="nav-item dropdown">
-                        <a class="nav-link py-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="icon-xs bg-gray rounded-circle me-2">
-                        <i class="fa fa-user"></i>
+                  </ul> -->
+               <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                     <a class="nav-link py-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"> <span class="icon-xs bg-gray rounded-circle me-2">
+                           <i class="fa fa-user"></i>
                         </span>
                         <span>Profile</span>
-                        </a> 
-                        <ul class="dropdown-menu dropdown-menu-end">
-                           <li> 
-                              <a class="dropdown-item" href="#">Profile</a>
-                           </li>
-                           <li> 
-                              <a class="dropdown-item" href="#">Account Settings</a>
-                           </li>
-                           <li>
-                              <a class="dropdown-item" href="#">Newsletter</a> 
-                           </li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li> 
-                              <a class="dropdown-item" href="#">Sign Out</a>
-                           </li>
-                        </ul>
-                     </li>
-                  </ul>
-               </div>
+                     </a>
+                     <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                           <a class="dropdown-item" href="#">Profile</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">Account Settings</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">Newsletter</a>
+                        </li>
+                        <li>
+                           <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">Sign Out</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
             </div>
-         </nav>
-         <!-- navbar end.// -->
-      </header>
-      <div class="wrapper" id="dvwrapper">
+         </div>
+      </nav>
+      <!-- navbar end.// -->
+   </header>
+   <div class="wrapper" id="dvwrapper">
       <aside class="active" id="sidebarleft" style="margin-left: 0px;">
          <nav class="sidebar">
             <ul class="list-unstyled components">
-               <li class=""><a class="ms-1" href="#">Home</a>
+               <li class=""><a class="ms-1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-home">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                     </svg> &nbsp;&nbsp;Home</a>
                </li>
-               <li><a class="ms-1" href="#">About</a>
+               <li><a class="ms-1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-badge-info">
+                        <path
+                           d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                        <line x1="12" x2="12" y1="16" y2="12" />
+                        <line x1="12" x2="12.01" y1="8" y2="8" />
+                     </svg> &nbsp;&nbsp;About</a>
                </li>
-               <li><a class="ms-1" href="#">Service</a>
+               <li><a class="ms-1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-list-checks">
+                        <path d="m3 17 2 2 4-4" />
+                        <path d="m3 7 2 2 4-4" />
+                        <path d="M13 6h8" />
+                        <path d="M13 12h8" />
+                        <path d="M13 18h8" />
+                     </svg> &nbsp;&nbsp;Service</a>
                </li>
-               <li><a class="ms-1" href="#">Product</a>
+               <li><a class="ms-1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-package">
+                        <path d="m7.5 4.27 9 5.15" />
+                        <path
+                           d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                        <path d="m3.3 7 8.7 5 8.7-5" />
+                        <path d="M12 22V12" />
+                     </svg> &nbsp;&nbsp;Product</a>
                </li>
-               <li><a class="ms-1" href="#">Contact</a>
+               <li><a class="ms-1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-circle-user">
+                        <circle cx="12" cy="12" r="10" />
+                        <circle cx="12" cy="10" r="3" />
+                        <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+                     </svg> &nbsp;&nbsp;Contact</a>
                </li>
                <li>
-                  <a class="ms-1 dropdown-toggle" href="#mnuProfile" data-bs-toggle="collapse" aria-expanded="false">Profile</a>
+                  <a class="ms-1 dropdown-toggle" href="#mnuProfile" data-bs-toggle="collapse"
+                     aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-user-round">
+                        <circle cx="12" cy="8" r="5" />
+                        <path d="M20 21a8 8 0 0 0-16 0" />
+                     </svg> &nbsp;&nbsp;Profile</a>
                   <ul class="collapse list-unstyled" id="mnuProfile">
                      <li><a class="ms-1" href="#">Profile</a>
                      </li>
@@ -284,7 +242,8 @@
                               </div>
                               <div class="px-md-1">
                                  <div class="progress mt-3 mb-1 rounded" style="height: 7px;">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 35%;"
+                                       aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
                                  </div>
                               </div>
                            </div>
@@ -304,7 +263,8 @@
                               </div>
                               <div class="px-md-1">
                                  <div class="progress mt-3 mb-1 rounded" style="height: 7px;">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 40%;"
+                                       aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                  </div>
                               </div>
                            </div>
@@ -324,7 +284,8 @@
                               </div>
                               <div class="px-md-1">
                                  <div class="progress mt-3 mb-1 rounded" style="height: 7px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 60%;"
+                                       aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                  </div>
                               </div>
                            </div>
@@ -344,7 +305,8 @@
                               </div>
                               <div class="px-md-1">
                                  <div class="progress mt-3 mb-1 rounded" style="height: 7px;">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 40%;"
+                                       aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                  </div>
                               </div>
                            </div>
@@ -366,13 +328,15 @@
                         </div>
                      </div>
                   </div>
-                  <button id="btnPrev" class="carousel-control-prev w-auto" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                  <button id="btnPrev" class="carousel-control-prev w-auto" type="button" data-bs-target="#carousel"
+                     data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Previous</span>
                   </button>
-                  <button id="btnNext" class="carousel-control-next w-auto" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                  <button id="btnNext" class="carousel-control-next w-auto" type="button" data-bs-target="#carousel"
+                     data-bs-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Next</span>
                   </button>
                </div>
             </div>
@@ -388,119 +352,9 @@
                </ol>
             </nav>
          </div>
-         <div class="row mt-2 mb-2">
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-               <div class="input-group">
-                  <button class="btn btn-primary btn-sm AddForm" id="btnAddSave_frmPRODUCTS">
-                  <i class="fa-sharp fa-solid fa-plus">
-                  </i> Add New</button>
-                  <button class="btn btn-primary btn-sm EditForm" id="btnEditSaveAs_frmPRODUCTS">
-                  <i class="fa-solid fa-pencil me-1">
-                  </i>Edit</button>
-                  <button class="btn btn-primary btn-sm DeleteForm" id="btnDeleteCancel_frmPRODUCTS">
-                  <i class="fa-solid fa-trash">
-                  </i> Delete</button>
-                  <button id="btnFilter" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" title="Filter..." data-bs-target="#ofcFilter">
-                  <i class="fa-solid fa-filter">
-                  </i>
-                  </button>
-                  <button id="btnOpenModal" type="button" class="btn btn-primary" data-bs-toggle="modal" tabindex="" title="Sort Records" data-bs-target="#mdlSort">
-                  <i class="fas fa-sort-alpha-down">
-                  </i>
-                  </button>
-                  <div class="mt-2 mt-md-0 mt-sm-0">
-                     <div class="input-group">
-                        <inputgroup id="FormPagination1" class="input-group input-group-sm" tabindex="" title="">
-                           <button type="button" class="btn btn-primary" tabindex="" title="First Record">
-                           <i id="fontawesome1" class="icon_fa fas fa-step-backward" tabindex="" title="">
-                           </i>
-                           </button>
-                           <button type="button" class="btn btn-primary" tabindex="" title="Previous Record">
-                           <i id="fontawesome2" class="fa-solid fa-caret-left" tabindex="" title="">
-                           </i>
-                           </button>
-                           <input class="form-control form-control-sm text-center txtFormPagination" type="text" placeholder="" autocomplete="off" tabindex="" title="Current Record / Total Records">
-                           <button type="button" class="btn btn-primary" tabindex="" title="Next Record">
-                           <i id="fontawesome3" class="fa-solid fa-caret-right" tabindex="" title="">
-                           </i>
-                           </button>
-                           <button type="button" class="btn btn-primary" tabindex="" title="Last Record">
-                           <i id="fontawesome4" class="icon_fa fas fa-step-forward" tabindex="" title="">
-                           </i>
-                           </button>
-                        </inputgroup>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-               <div id="div1" title="div1">
-                  <div class="input-group" id="dvipgFind">
-                     <input type="search" class="form-control form-control-sm FindValue" placeholder="Search" id="txtFind">
-                     <button class="btn btn-default btn-primary" type="button" title="Find..." id="btnSearch">
-                     <i class="fa-solid fa-magnifying-glass">
-                     </i>
-                     </button>
-                     <button class="btn btn-default btn-primary" type="button" title="Clear" id="btnClear">
-                     <i class="fas fa-ban">
-                     </i>
-                     </button>
-                     <button type="button" class="btn btn-default btn-primary dropdown-toggle" id="btnShowSetting" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                     </button>
-                     <div id="setting" class="dropdown-menu">
-                        <div class="container-fluid">
-                           <div class="row">
-                              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                 <label for="cboFields" class="control-label col">Select Fields:</label>
-                                 <div class="row">
-                                    <div class="col-md-6 col-lg-4 d-flex align-items-center">
-                                       <div class="dropdown bootstrap-select show-tick">
-                                          <select id="cboFields" name="cboFields" class="selectpicker" multiple="">
-                                             <option value="Product_Code">Product_Code</option>
-                                             <option value="Product_Name">Product_Name</option>
-                                             <option value="Product_Details">Product_Details</option>
-                                             <option value="HSN_Code">HSN_Code</option>
-                                             <option value="Product_Rate">Product_Rate</option>
-                                             <option value="GST_Rate">GST_Rate</option>
-                                             <option value="Best_Before">Best_Before</option>
-                                             <option value="BB_Unit">BB_Unit</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col-sm-12 col-md-12 col-lg-12">
-                                 <label for="sel1">Search Condition</label>
-                                 <select class="form-select input-sm" id="cboFindOperator" name="cboFindOperator">
-                                    <option value="equal" selected="selected">Equals</option>
-                                    <option value="not equal">Does not equal</option>
-                                    <option value="greater">Is greater than</option>
-                                    <option value="greater equal">Is greater than or equal to</option>
-                                    <option value="less">Is less than</option>
-                                    <option value="less equal">Is less than or equal to</option>
-                                    <option value="contains">Contains</option>
-                                    <option value="not contains">Does not contain</option>
-                                    <option value="startsWith">Begins with</option>
-                                    <option value="endsWith">Ends with</option>
-                                    <option value="like">Is like</option>
-                                    <option value="not like">Is not like</option>
-                                    <option value="blank">Is blank</option>
-                                    <option value="not blank">Is not blank</option>
-                                 </select>
-                              </div>
-                           </div>
-                           <div class="btn-group mt-1">
-                              <button type="button" class="btn btn-primary btn-sm">Apply</button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="offcanvas offcanvas-start offcanvas-xxl" id="ofcFilter" data-bs-scroll="true" data-bs-backdrop="true">
+
+         <div class="offcanvas offcanvas-start offcanvas-xxl" id="ofcFilter" data-bs-scroll="true"
+            data-bs-backdrop="true">
             <div class="offcanvas-header">
                <h5 class="offcanvas-title">Filter...</h5>
                <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
@@ -512,27 +366,39 @@
                   <div class="row m-2">
                      <div class="col-sm-12" id="colFilter">
                         <div class="form-check">
-                           <input id="chkFilter_Product_Code_0" name="chkFilter_Product_Code_0" type="checkbox" class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code" title="chkFilter_Product_Code_0" value="P02" onchange="LoadData_frmPRODUCTS(true);">
+                           <input id="chkFilter_Product_Code_0" name="chkFilter_Product_Code_0" type="checkbox"
+                              class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code"
+                              title="chkFilter_Product_Code_0" value="P02" onchange="LoadData_frmPRODUCTS(true);">
                            <label class="form-check-label" for="chkFilter_Product_Code_0">P02</label>
                         </div>
                         <div class="form-check">
-                           <input id="chkFilter_Product_Code_1" name="chkFilter_Product_Code_1" type="checkbox" class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code" title="chkFilter_Product_Code_1" value="P03" onchange="LoadData_frmPRODUCTS(true);">
+                           <input id="chkFilter_Product_Code_1" name="chkFilter_Product_Code_1" type="checkbox"
+                              class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code"
+                              title="chkFilter_Product_Code_1" value="P03" onchange="LoadData_frmPRODUCTS(true);">
                            <label class="form-check-label" for="chkFilter_Product_Code_1">P03</label>
                         </div>
                         <div class="form-check">
-                           <input id="chkFilter_Product_Code_2" name="chkFilter_Product_Code_2" type="checkbox" class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code" title="chkFilter_Product_Code_2" value="P04" onchange="LoadData_frmPRODUCTS(true);">
+                           <input id="chkFilter_Product_Code_2" name="chkFilter_Product_Code_2" type="checkbox"
+                              class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code"
+                              title="chkFilter_Product_Code_2" value="P04" onchange="LoadData_frmPRODUCTS(true);">
                            <label class="form-check-label" for="chkFilter_Product_Code_2">P04</label>
                         </div>
                         <div class="form-check">
-                           <input id="chkFilter_Product_Code_3" name="chkFilter_Product_Code_3" type="checkbox" class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code" title="chkFilter_Product_Code_3" value="P05" onchange="LoadData_frmPRODUCTS(true);">
+                           <input id="chkFilter_Product_Code_3" name="chkFilter_Product_Code_3" type="checkbox"
+                              class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code"
+                              title="chkFilter_Product_Code_3" value="P05" onchange="LoadData_frmPRODUCTS(true);">
                            <label class="form-check-label" for="chkFilter_Product_Code_3">P05</label>
                         </div>
                         <div class="form-check">
-                           <input id="chkFilter_Product_Code_4" name="chkFilter_Product_Code_4" type="checkbox" class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code" title="chkFilter_Product_Code_4" value="P06" onchange="LoadData_frmPRODUCTS(true);">
+                           <input id="chkFilter_Product_Code_4" name="chkFilter_Product_Code_4" type="checkbox"
+                              class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code"
+                              title="chkFilter_Product_Code_4" value="P06" onchange="LoadData_frmPRODUCTS(true);">
                            <label class="form-check-label" for="chkFilter_Product_Code_4">P06</label>
                         </div>
                         <div class="form-check">
-                           <input id="chkFilter_Product_Code_5" name="chkFilter_Product_Code_5" type="checkbox" class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code" title="chkFilter_Product_Code_5" value="P07" onchange="LoadData_frmPRODUCTS(true);">
+                           <input id="chkFilter_Product_Code_5" name="chkFilter_Product_Code_5" type="checkbox"
+                              class="form-check-input filter" db_table="PRODUCTS" db_field="Product_Code"
+                              title="chkFilter_Product_Code_5" value="P07" onchange="LoadData_frmPRODUCTS(true);">
                            <label class="form-check-label" for="chkFilter_Product_Code_5">P07</label>
                         </div>
                      </div>
@@ -540,7 +406,8 @@
                </details>
             </div>
          </div>
-         <div id="mdlSort" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mdlSortLabel" class="modal fade" aria-modal="true" role="dialog">
+         <div id="mdlSort" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="mdlSortLabel" class="modal fade" aria-modal="true" role="dialog">
             <div class="modal-dialog modal-md">
                <div class="modal-content">
                   <div class="modal-header pb-1 pt-1 text-white">
@@ -595,16 +462,18 @@
                                  </table>
                               </div>
                            </div>
-                           <div class="col-sm-1 ps-1">
-                              <button type="button" class="btn btn-default btn-sm downArrow btn-outline-dark" onclick="MoveTableRow('up','tblbdySort');">
-                              <i class="fas fa-caret-up">
-                              </i>
+                           <!-- <div class="col-sm-1 ps-1">
+                              <button type="button" class="btn btn-default btn-sm downArrow btn-outline-dark"
+                                 onclick="MoveTableRow('up','tblbdySort');">
+                                 <i class="fas fa-caret-up">
+                                 </i>
                               </button>
-                              <button type="button" class="btn btn-default btn-sm upArrow mb-1 mt-1 btn-outline-dark" onclick="MoveTableRow('down','tblbdySort');">
-                              <i class="fas fa-caret-down">
-                              </i>
+                              <button type="button" class="btn btn-default btn-sm upArrow mb-1 mt-1 btn-outline-dark"
+                                 onclick="MoveTableRow('down','tblbdySort');">
+                                 <i class="fas fa-caret-down">
+                                 </i>
                               </button>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </div>
@@ -613,8 +482,10 @@
                         <div class="row">
                            <div class="col-sm-12">
                               <div class="float-end">
-                                 <button type="button" class="btn btn-primary btn-sm text-white btn-outline-dark" data-bs-dismiss="modal">Sort</button>
-                                 <button type="button" class="btn btn-danger btn-sm text-white btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
+                                 <button type="button" class="btn btn-primary btn-sm text-white btn-outline-dark"
+                                    data-bs-dismiss="modal">Sort</button>
+                                 <button type="button" class="btn btn-danger btn-sm text-white btn-outline-dark"
+                                    data-bs-dismiss="modal">Cancel</button>
                               </div>
                            </div>
                         </div>
@@ -623,301 +494,568 @@
                </div>
             </div>
          </div>
-         <div class="container-fluid">
-            <form id="frmPRODUCTS" class="" tabindex="" title="">
-               <div class="row">
-                  <div class="col-sm-6">
-                     <label id="lblproductcode" class="col-form-label" db_summary="" tabindex="" title="" caption="Product Code :">Product Code :</label>
-                     <input id="txtProduct_Code1" name="txtProduct_Code1" class="form-control form-control-sm" type="text" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
-                  </div>
-                  <div class="col-sm-6">
-                     <label id="lblproductname" class="col-form-label" db_summary="" tabindex="" title="" caption="Product Name :">Product Name :</label>
-                     <input id="txtProduct_Name1" name="txtProduct_Name1" class="form-control form-control-sm" type="text" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-sm-6 mt-2">
-                     <label id="lblproductdetails" class="col-form-label" db_summary="" tabindex="" title="" caption="Product Details :">Category :</label>
-                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                        <label class="form-check-label" for="inlineRadio1">Electronics</label>
+         <div class="firstfrom">
+            <div class="container-fluid">
+               <form id="frmPRODUCTS" class="" tabindex="" title="">
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <h4>Product Details</h4>
                      </div>
-                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Grocery</label>
-                     </div>
-                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
-                        <label class="form-check-label" for="inlineRadio3">Fashion</label>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 mt-2">
-                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="chkAvailable" value="option1" checked>
-                        <label class="form-check-label" for="chkAvailable">Available</label>
-                     </div>
-                  </div>
-               </div>
-               <hr id="horizontalrule1" style="" tabindex="" title="" class="">
-               <div class="row">
-                  <div class="col-sm-6">
-                     <label id="lblproductrate" class="col-form-label" db_summary="" tabindex="" title="" caption="Product Rate :">Product Rate :</label>
-                     <input id="nbrProduct_Rate1" name="nbrProduct_Rate1" class="form-control form-control-sm" type="number" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
-                  </div>
-                  <div class="col-sm-6">
-                     <label id="lblgstrate" class="col-form-label" db_summary="" tabindex="" title="" caption="Gst Rate :">Gst Rate :</label>
-                     <input id="nbrGST_Rate1" name="nbrGST_Rate1" class="form-control form-control-sm" type="number" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-sm-6">
-                     <label id="lblbestbefore" class="col-form-label" db_summary="" tabindex="" title="" caption="Best Before :">Best Before :</label>
-                     <input id="nbrBest_Before1" name="nbrBest_Before1" class="form-control form-control-sm" type="number" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
-                  </div>
-                  <div class="col-sm-6">
-                     <label id="lblbbunit" class="col-form-label" db_summary="" tabindex="" title="" caption="Bb Unit :">Bb Unit :</label>
-                     <input id="txtBB_Unit1" name="txtBB_Unit1" class="form-control form-control-sm" type="text" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
-                  </div>
-               </div>
-            </form>
-         </div>
-         <div class="accordion" id="Accordion">
-            <div class="accordion-item">
-               <h2 class="accordion-header" id="divHead_Accordion01">
-                  <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#btnAccord_Accordion01">Form View</button>									
-               </h2>
-               <div id="btnAccord_Accordion01" class="accordion-collapse collapse show">
-                  <div class="accordion-body" id="AccordBody_Accordion01">
-                     <div class="container-fluid">
-                        <form id="frmEMPLOYEES" class="" >
-                           <div id="tab1" class="tab">
-                              <nav>
-                                 <div class="nav nav-tabs" id="btns_tab1" role="tablist">
-                                    <button class="nav-link active" id="btn_tab1_1" data-bs-toggle="tab" data-bs-target="#div_tab1_1" type="button" role="tab" aria-controls="div_tab1_1" aria-selected="true">Personal Info.</button>
-                                    <button class="nav-link" id="btn_tab1_2" data-bs-toggle="tab" data-bs-target="#div_tab1_2" type="button" role="tab" aria-controls="div_tab1_2" aria-selected="false">Official Info.</button>
+                     <hr>
+
+                     <div class="row mt-2 mb-2">
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                           <div class="input-group">
+                              <button class="btn btn-primary btn-sm AddForm ms-1" id="btnAddSave_frmPRODUCTS">
+                                 <i class="fa-sharp fa-solid fa-plus">
+                                 </i> Add New</button>
+                              <button class="btn btn-primary btn-sm EditForm ms-1" id="btnEditSaveAs_frmPRODUCTS">
+                                 <i class="fa-solid fa-pencil me-1">
+                                 </i>Edit</button>
+                              <button class="btn btn-primary btn-sm DeleteForm ms-1" id="btnDeleteCancel_frmPRODUCTS">
+                                 <i class="fa-solid fa-trash">
+                                 </i> Delete</button>
+                              <button id="btnFilter" class="btn btn-primary ms-1" type="button" data-bs-toggle="offcanvas"
+                                 title="Filter..." data-bs-target="#ofcFilter">
+                                 <i class="fa-solid fa-filter">
+                                 </i>
+                              </button>
+                              <button id="btnOpenModal" type="button" class="btn btn-primary ms-1" data-bs-toggle="modal"
+                                 tabindex="" title="Sort Records" data-bs-target="#mdlSort">
+                                 <i class="fas fa-sort-alpha-down">
+                                 </i>
+                              </button>
+                              <div class="mt-2 mt-md-0 mt-sm-0">
+                                 <div class="input-group">
+                                    <inputgroup id="FormPagination1" class="input-group input-group-sm" tabindex=""
+                                       title="">
+                                       <button type="button" class="btn btn-primary ms-1" tabindex="" title="First Record">
+                                          <i id="fontawesome1" class="icon_fa fas fa-step-backward" tabindex=""
+                                             title="">
+                                          </i>
+                                       </button>
+                                       <button type="button" class="btn btn-primary" tabindex=""
+                                          title="Previous Record">
+                                          <i id="fontawesome2" class="fa-solid fa-caret-left" tabindex="" title="">
+                                          </i>
+                                       </button>
+                                       <input class="form-control form-control-sm text-center txtFormPagination"
+                                          type="text" placeholder="" autocomplete="off" tabindex=""
+                                          title="Current Record / Total Records">
+                                       <button type="button" class="btn btn-primary" tabindex="" title="Next Record">
+                                          <i id="fontawesome3" class="fa-solid fa-caret-right" tabindex="" title="">
+                                          </i>
+                                       </button>
+                                       <button type="button" class="btn btn-primary" tabindex="" title="Last Record">
+                                          <i id="fontawesome4" class="icon_fa fas fa-step-forward" tabindex="" title="">
+                                          </i>
+                                       </button>
+                                    </inputgroup>
                                  </div>
-                              </nav>
-                              <div class="tab-content" id="tabContent_tab1">
-                                 <div class="tab-pane fade p-2 active show" id="div_tab1_1" role="tabpanel" aria-labelledby="btn_tab1_2" tabindex="0" style="border-color: #dee2e6;border-style: solid;border-width: 0px 1px 1px 1px;">
-                                    <div class="row">
-                                       <div class="col-sm-6"><label id="lblemployeecode" class="col-form-label" caption="Employee Code :">Employee Code :</label><input id="nbrEmployee_Code1" name="nbrEmployee_Code1" class="form-control form-control-sm" type="number" db_table="employees" db_field="Employee_Code" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                       <div class="col-sm-6"><label id="lblemployeename" class="col-form-label" caption="Employee Name :">Employee Name :</label><input id="txtEmployee_Name1" name="txtEmployee_Name1" class="form-control form-control-sm" type="text" db_table="employees" db_field="Employee_Name" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-6"><label id="lbldob" class="col-form-label" caption="Dob :">Dob :</label><input id="datDOB" name="datDOB" class="form-control form-control-sm" type="date" db_table="employees" db_field="DOB" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                       <div class="col-sm-6">
-                                          <label id="lblage" class="col-form-label" caption="Age :">Nationality</label>
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                             <label class="form-check-label" for="flexCheckDefault">
-                                             Indian
-                                             </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                           <div id="div1" title="div1">
+                              <div class="input-group" id="dvipgFind">
+                                 <input type="search" class="form-control form-control-sm FindValue"
+                                    placeholder="Search" id="txtFind">
+                                 <button class="btn btn-default btn-primary" type="button" title="Find..."
+                                    id="btnSearch">
+                                    <i class="fa-solid fa-magnifying-glass">
+                                    </i>
+                                 </button>
+                                 <button class="btn btn-default btn-primary ms-1" type="button" title="Clear" id="btnClear">
+                                    <i class="fas fa-ban">
+                                    </i>
+                                 </button>
+                                 <button type="button" class="btn btn-default btn-primary dropdown-toggle ms-1"
+                                    id="btnShowSetting" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                    aria-expanded="false">
+                                 </button>
+                                 <div id="setting" class="dropdown-menu ms-1">
+                                    <div class="container-fluid">
+                                       <div class="row">
+                                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                             <label for="cboFields" class="control-label col">Select Fields:</label>
+                                             <div class="row">
+                                                <div class="col-md-6 col-lg-4 d-flex align-items-center">
+                                                   <div class="dropdown bootstrap-select show-tick">
+                                                      <select id="cboFields" name="cboFields" class="selectpicker"
+                                                         multiple="">
+                                                         <option value="Product_Code">Product_Code</option>
+                                                         <option value="Product_Name">Product_Name</option>
+                                                         <option value="Product_Details">Product_Details</option>
+                                                         <option value="HSN_Code">HSN_Code</option>
+                                                         <option value="Product_Rate">Product_Rate</option>
+                                                         <option value="GST_Rate">GST_Rate</option>
+                                                         <option value="Best_Before">Best_Before</option>
+                                                         <option value="BB_Unit">BB_Unit</option>
+                                                      </select>
+                                                   </div>
+                                                </div>
+                                             </div>
                                           </div>
                                        </div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-6">
-                                          <label id="lblgender" class="col-form-label" caption="Gender :">Gender :</label><br>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                             <label class="form-check-label" for="inlineRadio1">Male</label>
+                                       <div class="row">
+                                          <div class="col-sm-12 col-md-12 col-lg-12">
+                                             <label for="sel1">Search Condition</label>
+                                             <select class="form-select input-sm" id="cboFindOperator"
+                                                name="cboFindOperator">
+                                                <option value="equal" selected="selected">Equals</option>
+                                                <option value="not equal">Does not equal</option>
+                                                <option value="greater">Is greater than</option>
+                                                <option value="greater equal">Is greater than or equal to</option>
+                                                <option value="less">Is less than</option>
+                                                <option value="less equal">Is less than or equal to</option>
+                                                <option value="contains">Contains</option>
+                                                <option value="not contains">Does not contain</option>
+                                                <option value="startsWith">Begins with</option>
+                                                <option value="endsWith">Ends with</option>
+                                                <option value="like">Is like</option>
+                                                <option value="not like">Is not like</option>
+                                                <option value="blank">Is blank</option>
+                                                <option value="not blank">Is not blank</option>
+                                             </select>
                                           </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                             <label class="form-check-label" for="inlineRadio2">Female</label>
-                                          </div>
                                        </div>
-                                       <div class="col-sm-6">
-                                          <label id="lblbloodgroup" class="col-form-label" caption="Blood Group :">Blood Group :</label>
-                                          <select id="cboBlood_Group" name="cboBlood_Group" class="form-select form-select-sm" db_table="employees" db_field="Blood_Group" db_summary="" size="1" tabindex="">
-                                             <option value="" selected="">A Positive</option>
-                                             <option value="" >A Negative</option>
-                                             <option value="" >A b Positive</option>
-                                             <option value="" >A b Negative</option>
-                                             <option value="" >B Positive</option>
-                                             <option value="" >B Negative</option>
-                                             <option value="" >O Positive</option>
-                                             <option value="" >O Negative</option>
-                                          </select>
+                                       <div class="btn-group mt-1">
+                                          <button type="button" class="btn btn-primary btn-sm">Apply</button>
                                        </div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-6"><label id="lblfathername" class="col-form-label" caption="Father Name :">Father Name :</label><input id="txtFather_Name1" name="txtFather_Name1" class="form-control form-control-sm" type="text" db_table="employees" db_field="Father_Name" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                       <div class="col-sm-6"><label id="lbllocaladdress" class="col-form-label" caption="Local Address :">Local Address :</label><input id="txtLocal_Address1" name="txtLocal_Address1" class="form-control form-control-sm" type="text" db_table="employees" db_field="Local_Address" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-6"><label id="lblmobileno" class="col-form-label" caption="Mobile No :">Mobile No :</label><input id="txtMobile_No1" name="txtMobile_No1" class="form-control form-control-sm" type="text" db_table="employees" db_field="Mobile_No" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                       <div class="col-sm-6"><label id="lblemail" class="col-form-label" caption="Email :">Email :</label><input id="txtEmail1" name="txtEmail1" class="form-control form-control-sm" type="text" db_table="employees" db_field="Email" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-6"><label id="lblpanno" class="col-form-label" caption="Pan No :">Pan No :</label><input id="txtPAN_No1" name="txtPAN_No1" class="form-control form-control-sm" type="text" db_table="employees" db_field="PAN_No" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                       <div class="col-sm-6">
-                                          <label id="lblhighestqualification" class="col-form-label" caption="Highest Qualification :">Highest Qualification :</label>
-                                          <select id="cboHighest_Qualification" name="cboHighest_Qualification" class="form-select form-select-sm" db_table="employees" db_field="Highest_Qualification" db_summary="" size="1" tabindex="">
-                                             <option value="" selected="">Bachelor's degree</option>
-                                             <option value="" >Master's Degree</option>
-                                             <option value="" >Doctorate</option>
-                                             <option value="" >Advanced Diploma</option>
-                                             <option value="" >Postgraduate Certificate</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-12"><label id="lblbankacno" class="col-form-label" caption="Bank Ac No :">Bank A/c No :</label><input id="txtBank_Ac_No1" name="txtBank_Ac_No1" class="form-control form-control-sm" type="text" db_table="employees" db_field="Bank_Ac_No" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                    </div>
-                                 </div>
-                                 <div class="tab-pane fade p-2" id="div_tab1_2" role="tabpanel" aria-labelledby="btn_tab1_1" tabindex="0" style="border-color: #dee2e6;border-style: solid;border-width: 0px 1px 1px 1px;">
-                                    <div class="row">
-                                       <div class="col-sm-6"><label id="lbljoiningdate" class="col-form-label" caption="Joining Date :">Joining Date :</label><input id="datJoining_Date" name="datJoining_Date" class="form-control form-control-sm" type="date" db_table="employees" db_field="Joining_Date" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                       <div class="col-sm-6"><label id="lblleavingdate" class="col-form-label" caption="Leaving Date :">Leaving Date :</label><input id="datLeaving_Date" name="datLeaving_Date" class="form-control form-control-sm" type="date" db_table="employees" db_field="Leaving_Date" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-6">
-                                          <label id="lbldesignation" class="col-form-label" caption="Designation :">Designation :</label>
-                                          <select id="cboDesignation" name="cboDesignation" class="form-select form-select-sm" db_table="employees" db_field="Designation" db_summary="" size="1" tabindex="">
-                                             <option value="" selected="">Manager</option>
-                                             <option value="" >Director</option>
-                                             <option value="" >CEO</option>
-                                             <option value="" >HR</option>
-                                             <option value="" >Labour</option>
-                                             <option value="" >Supervisor</option>
-                                             <option value="" >Foremen</option>
-                                             <option value="" >Clerk</option>
-                                          </select>
-                                       </div>
-                                       <div class="col-sm-6">
-                                          <label id="lbldepartmentname" class="col-form-label" caption="Department Name :">Department Name :</label>
-                                          <select id="cboDepartment_Name" name="cboDepartment_Name" class="form-select form-select-sm" db_table="employees" db_field="Department_Name" db_summary="" size="1" tabindex="">
-                                             <option value="" selected="">Marketing</option>
-                                             <option value="">Operations</option>
-                                             <option value="">Finance</option>
-                                             <option value="">Sales</option>
-                                             <option value="">Human Resource</option>
-                                             <option value="">Purchase</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-6"><label id="lblepfno" class="col-form-label" caption="Epf No :">Epf No :</label><input id="txtEPF_No1" name="txtEPF_No1" class="form-control form-control-sm" type="text" db_table="employees" db_field="EPF_No" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                       <div class="col-sm-6"><label id="lblesicno" class="col-form-label" caption="Esic No :">Esic No :</label><input id="txtESIC_No1" name="txtESIC_No1" class="form-control form-control-sm" type="text" db_table="employees" db_field="ESIC_No" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-sm-6"><label id="lbluanno" class="col-form-label" caption="Uan No :">Uan No :</label><input id="txtUAN_No1" name="txtUAN_No1" class="form-control form-control-sm" type="text" db_table="employees" db_field="UAN_No" db_summary="" placeholder="" autocomplete="off" validation="" custom_validation="" valid_message="" invalid_message=""></div>
-                                       <div class="col-sm-6"><label id="lblremarks" class="col-form-label" caption="Remarks :">Remarks :</label><textarea  id="txaRemarks" name="txaRemarks" class="form-control" db_table="employees" db_field="Remarks" db_summary="" rows="2" placeholder="" autocomplete="off" tabindex=""></textarea></div>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                        </form>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <label id="lblproductcode" class="col-form-label" db_summary="" tabindex="" title=""
+                           caption="Product Code">Product Code</label>
+                        <input id="txtProduct_Code1" name="txtProduct_Code1" class="form-control form-control-sm"
+                           type="text" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
+                     </div>
+                     <div class="col-sm-6">
+                        <label id="lblproductname" class="col-form-label" db_summary="" tabindex="" title=""
+                           caption="Product Name">Product Name</label>
+                        <input id="txtProduct_Name1" name="txtProduct_Name1" class="form-control form-control-sm"
+                           type="text" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-6 mt-2">
+                        <label id="lblproductdetails" class="col-form-label" db_summary="" tabindex="" title=""
+                           caption="Product Details">Category</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                              value="option1" checked>
+                           <label class="form-check-label" for="inlineRadio1">Electronics</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                              value="option2">
+                           <label class="form-check-label" for="inlineRadio2">Grocery</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                              value="option2">
+                           <label class="form-check-label" for="inlineRadio3">Fashion</label>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 mt-2">
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" id="chkAvailable" value="option1" checked>
+                           <label class="form-check-label" for="chkAvailable">Available</label>
+                        </div>
+                     </div>
+                  </div>
+                  <hr id="horizontalrule1" tabindex="" title="" class="">
+                  <div class="row">
+                     <div class="col-md-3 col-sm-12">
+                        <label id="lblproductrate" class="col-form-label" db_summary="" tabindex="" title=""
+                           caption="Product Rate">Product Rate</label>
+                        <input id="nbrProduct_Rate1" name="nbrProduct_Rate1" class="form-control form-control-sm"
+                           type="number" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
+                     </div>
+                     <div class="col-md-3 col-sm-12">
+                        <label id="lblgstrate" class="col-form-label" db_summary="" tabindex="" title=""
+                           caption="Gst Rate">Gst Rate</label>
+                        <input id="nbrGST_Rate1" name="nbrGST_Rate1" class="form-control form-control-sm" type="number"
+                           db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
+                     </div>
+                     <div class="col-md-3 col-sm-12">
+                        <label id="lblbestbefore" class="col-form-label" db_summary="" tabindex="" title=""
+                           caption="Best Before">Best Before</label>
+                        <input id="nbrBest_Before1" name="nbrBest_Before1" class="form-control form-control-sm"
+                           type="number" db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
+                     </div>
+                     <div class="col-md-3 col-sm-12">
+                        <label id="lblbbunit" class="col-form-label" db_summary="" tabindex="" title=""
+                           caption="Bb Unit">Bb Unit</label>
+                        <input id="txtBB_Unit1" name="txtBB_Unit1" class="form-control form-control-sm" type="text"
+                           db_summary="" placeholder="" autocomplete="off" tabindex="" title="">
+                     </div>
+                  </div>
+                  <div class="row">
+
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="container-fluid mt-3">
+            <div class="accordion" id="Accordion">
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="divHead_Accordion01">
+                     <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                        data-bs-target="#btnAccord_Accordion01">Form View</button>
+                  </h2>
+                  <div id="btnAccord_Accordion01" class="accordion-collapse collapse show">
+                     <div class="accordion-body" id="AccordBody_Accordion01">
+                        <div class="container-fluid">
+                           <form id="frmEMPLOYEES" class="">
+                              <div id="tab1" class="tab">
+                                 <nav>
+                                    <div class="nav nav-tabs" id="btns_tab1" role="tablist">
+                                       <button class="nav-link active" id="btn_tab1_1" data-bs-toggle="tab"
+                                          data-bs-target="#div_tab1_1" type="button" role="tab"
+                                          aria-controls="div_tab1_1" aria-selected="true">Personal Info.</button>
+                                       <button class="nav-link" id="btn_tab1_2" data-bs-toggle="tab"
+                                          data-bs-target="#div_tab1_2" type="button" role="tab"
+                                          aria-controls="div_tab1_2" aria-selected="false">Official Info.</button>
+                                    </div>
+                                 </nav>
+                                 <div class="tab-content" id="tabContent_tab1">
+                                    <div class="tab-pane fade p-2 active show" id="div_tab1_1" role="tabpanel"
+                                       aria-labelledby="btn_tab1_2" tabindex="0">
+                                       <div class="row">
+                                          <div class="col-sm-4"><label id="lblemployeecode" class="col-form-label"
+                                                caption="Employee Code">Employee Code</label><input
+                                                id="nbrEmployee_Code1" name="nbrEmployee_Code1"
+                                                class="form-control form-control-sm" type="number" db_table="employees"
+                                                db_field="Employee_Code" db_summary="" placeholder="" autocomplete="off"
+                                                validation="" custom_validation="" valid_message="" invalid_message="">
+                                          </div>
+                                          <div class="col-sm-4"><label id="lblemployeename" class="col-form-label"
+                                                caption="Employee Name">Employee Name</label><input
+                                                id="txtEmployee_Name1" name="txtEmployee_Name1"
+                                                class="form-control form-control-sm" type="text" db_table="employees"
+                                                db_field="Employee_Name" db_summary="" placeholder="" autocomplete="off"
+                                                validation="" custom_validation="" valid_message="" invalid_message="">
+                                          </div>
+                                          <div class="col-sm-4"><label id="lbldob" class="col-form-label"
+                                                caption="Dob">Dob</label><input id="datDOB" name="datDOB"
+                                                class="form-control form-control-sm" type="date" db_table="employees"
+                                                db_field="DOB" db_summary="" placeholder="" autocomplete="off"
+                                                validation="" custom_validation="" valid_message="" invalid_message="">
+                                          </div>
+                                          <div class="col-sm-4">
+                                             <label id="lblage" class="col-form-label" caption="Age">Nationality</label>
+                                             <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                   id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                   Indian
+                                                </label>
+                                             </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                             <label id="lblgender" class="col-form-label" caption="Gender">Gender
+                                             </label><br>
+                                             <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                   id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                                             </div>
+                                             <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                   id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                                             </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                             <label id="lblbloodgroup" class="col-form-label"
+                                                caption="Blood Group">Blood
+                                                Group</label>
+                                             <select id="cboBlood_Group" name="cboBlood_Group"
+                                                class="form-select form-select-sm" db_table="employees"
+                                                db_field="Blood_Group" db_summary="" size="1" tabindex="">
+                                                <option value="" selected="">A Positive</option>
+                                                <option value="">A Negative</option>
+                                                <option value="">A b Positive</option>
+                                                <option value="">A b Negative</option>
+                                                <option value="">B Positive</option>
+                                                <option value="">B Negative</option>
+                                                <option value="">O Positive</option>
+                                                <option value="">O Negative</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-sm-4"><label id="lblfathername" class="col-form-label"
+                                                caption="Father Name">Father Name</label><input id="txtFather_Name1"
+                                                name="txtFather_Name1" class="form-control form-control-sm" type="text"
+                                                db_table="employees" db_field="Father_Name" db_summary="" placeholder=""
+                                                autocomplete="off" validation="" custom_validation="" valid_message=""
+                                                invalid_message=""></div>
+                                          <div class="col-sm-4"><label id="lbllocaladdress" class="col-form-label"
+                                                caption="Local Address">Local Address</label><input
+                                                id="txtLocal_Address1" name="txtLocal_Address1"
+                                                class="form-control form-control-sm" type="text" db_table="employees"
+                                                db_field="Local_Address" db_summary="" placeholder="" autocomplete="off"
+                                                validation="" custom_validation="" valid_message="" invalid_message="">
+                                          </div>
+                                          <div class="col-sm-4"><label id="lblmobileno" class="col-form-label"
+                                                caption="Mobile No">Mobile No</label><input id="txtMobile_No1"
+                                                name="txtMobile_No1" class="form-control form-control-sm" type="text"
+                                                db_table="employees" db_field="Mobile_No" db_summary="" placeholder=""
+                                                autocomplete="off" validation="" custom_validation="" valid_message=""
+                                                invalid_message=""></div>
+                                          <div class="col-sm-4"><label id="lblemail" class="col-form-label"
+                                                caption="Email">Email</label><input id="txtEmail1" name="txtEmail1"
+                                                class="form-control form-control-sm" type="text" db_table="employees"
+                                                db_field="Email" db_summary="" placeholder="" autocomplete="off"
+                                                validation="" custom_validation="" valid_message="" invalid_message="">
+                                          </div>
+                                          <div class="col-sm-4"><label id="lblpanno" class="col-form-label"
+                                                caption="Pan No">Pan No</label><input id="txtPAN_No1" name="txtPAN_No1"
+                                                class="form-control form-control-sm" type="text" db_table="employees"
+                                                db_field="PAN_No" db_summary="" placeholder="" autocomplete="off"
+                                                validation="" custom_validation="" valid_message="" invalid_message="">
+                                          </div>
+                                          <div class="col-sm-4">
+                                             <label id="lblhighestqualification" class="col-form-label"
+                                                caption="Highest Qualification">Highest Qualification</label>
+                                             <select id="cboHighest_Qualification" name="cboHighest_Qualification"
+                                                class="form-select form-select-sm" db_table="employees"
+                                                db_field="Highest_Qualification" db_summary="" size="1" tabindex="">
+                                                <option value="" selected="">Bachelor's degree</option>
+                                                <option value="">Master's Degree</option>
+                                                <option value="">Doctorate</option>
+                                                <option value="">Advanced Diploma</option>
+                                                <option value="">Postgraduate Certificate</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-sm-4"><label id="lblbankacno" class="col-form-label"
+                                                caption="Bank Ac No">Bank A/c No</label><input id="txtBank_Ac_No1"
+                                                name="txtBank_Ac_No1" class="form-control form-control-sm" type="text"
+                                                db_table="employees" db_field="Bank_Ac_No" db_summary="" placeholder=""
+                                                autocomplete="off" validation="" custom_validation="" valid_message=""
+                                                invalid_message=""></div>
+                                       </div>
+
+
+
+
+                                    </div>
+                                    <div class="tab-pane fade p-2" id="div_tab1_2" role="tabpanel"
+                                       aria-labelledby="btn_tab1_1" tabindex="0">
+                                       <div class="row">
+                                          <div class="col-sm-4"><label id="lbljoiningdate" class="col-form-label"
+                                                caption="Joining Date">Joining Date</label><input id="datJoining_Date"
+                                                name="datJoining_Date" class="form-control form-control-sm" type="date"
+                                                db_table="employees" db_field="Joining_Date" db_summary=""
+                                                placeholder="" autocomplete="off" validation="" custom_validation=""
+                                                valid_message="" invalid_message=""></div>
+                                          <div class="col-sm-4"><label id="lblleavingdate" class="col-form-label"
+                                                caption="Leaving Date">Leaving Date</label><input id="datLeaving_Date"
+                                                name="datLeaving_Date" class="form-control form-control-sm" type="date"
+                                                db_table="employees" db_field="Leaving_Date" db_summary=""
+                                                placeholder="" autocomplete="off" validation="" custom_validation=""
+                                                valid_message="" invalid_message=""></div>
+                                          <div class="col-sm-4">
+                                             <label id="lbldesignation" class="col-form-label"
+                                                caption="Designation">Designation</label>
+                                             <select id="cboDesignation" name="cboDesignation"
+                                                class="form-select form-select-sm" db_table="employees"
+                                                db_field="Designation" db_summary="" size="1" tabindex="">
+                                                <option value="" selected="">Manager</option>
+                                                <option value="">Director</option>
+                                                <option value="">CEO</option>
+                                                <option value="">HR</option>
+                                                <option value="">Labour</option>
+                                                <option value="">Supervisor</option>
+                                                <option value="">Foremen</option>
+                                                <option value="">Clerk</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-sm-4">
+                                             <label id="lbldepartmentname" class="col-form-label"
+                                                caption="Department Name">Department Name</label>
+                                             <select id="cboDepartment_Name" name="cboDepartment_Name"
+                                                class="form-select form-select-sm" db_table="employees"
+                                                db_field="Department_Name" db_summary="" size="1" tabindex="">
+                                                <option value="" selected="">Marketing</option>
+                                                <option value="">Operations</option>
+                                                <option value="">Finance</option>
+                                                <option value="">Sales</option>
+                                                <option value="">Human Resource</option>
+                                                <option value="">Purchase</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-sm-4"><label id="lblepfno" class="col-form-label"
+                                                caption="Epf No">Epf No</label><input id="txtEPF_No1" name="txtEPF_No1"
+                                                class="form-control form-control-sm" type="text" db_table="employees"
+                                                db_field="EPF_No" db_summary="" placeholder="" autocomplete="off"
+                                                validation="" custom_validation="" valid_message="" invalid_message="">
+                                          </div>
+                                          <div class="col-sm-4"><label id="lblesicno" class="col-form-label"
+                                                caption="Esic No">Esic No</label><input id="txtESIC_No1"
+                                                name="txtESIC_No1" class="form-control form-control-sm" type="text"
+                                                db_table="employees" db_field="ESIC_No" db_summary="" placeholder=""
+                                                autocomplete="off" validation="" custom_validation="" valid_message=""
+                                                invalid_message=""></div>
+                                          <div class="col-sm-4"><label id="lbluanno" class="col-form-label"
+                                                caption="Uan No">Uan No</label><input id="txtUAN_No1" name="txtUAN_No1"
+                                                class="form-control form-control-sm" type="text" db_table="employees"
+                                                db_field="UAN_No" db_summary="" placeholder="" autocomplete="off"
+                                                validation="" custom_validation="" valid_message="" invalid_message="">
+                                          </div>
+                                          <div class="col-sm-4"><label id="lblremarks" class="col-form-label"
+                                                caption="Remarks">Remarks</label><textarea id="txaRemarks"
+                                                name="txaRemarks" class="form-control" db_table="employees"
+                                                db_field="Remarks" db_summary="" rows="2" placeholder=""
+                                                autocomplete="off" tabindex=""></textarea></div>
+                                       </div>
+
+
+
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="accordion-item">
-               <h2 class="accordion-header" id="divHead_Accordion11">
-                  <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#btnAccord_Accordion11">Tablular View</button>									
-               </h2>
-               <div id="btnAccord_Accordion11" class="accordion-collapse collapse show">
-                  <div class="accordion-body" id="AccordBody_Accordion11">
-                     <div class="table-responsive">
-                        <table id="tblPRODUCTS" class="col-md-12 sortable-table table table-striped table-hover">
-                           <thead class="text-center">
-                              <tr>
-                                 <th colspan="2">
-                                 </th>
-                                 <th onclick="SortTable('tblPRODUCTS',2);">Product Code <i class="fa fa-sort" aria-hidden="true">
-                                    </i>
-                                 </th>
-                                 <th onclick="SortTable('tblPRODUCTS',3);">Product Name <i class="fa fa-sort" aria-hidden="true">
-                                    </i>
-                                 </th>
-                                 <th onclick="SortTable('tblPRODUCTS',4);">Hsn Code <i class="fa fa-sort" aria-hidden="true">
-                                    </i>
-                                 </th>
-                                 <th onclick="SortTable('tblPRODUCTS',5);">Product Rate <i class="fa fa-sort" aria-hidden="true">
-                                    </i>
-                                 </th>
-                              </tr>
-                              <tr>
-                                 <th colspan="2">
-                                 </th>
-                                 <th>
-                                    <input type="search" oninput="ColumnSearch('tblPRODUCTS', this, 2);" class="form-control form-control-sm" id="txtFnd_Product_Code" placeholder="search">
-                                 </th>
-                                 <th>
-                                    <input type="search" oninput="ColumnSearch('tblPRODUCTS', this, 3);" class="form-control form-control-sm" id="txtFnd_Product_Name" placeholder="search">
-                                 </th>
-                                 <th>
-                                    <input type="search" oninput="ColumnSearch('tblPRODUCTS', this, 4);" class="form-control form-control-sm" id="txtFnd_HSN_Code" placeholder="search">
-                                 </th>
-                                 <th>
-                                    <input type="search" oninput="ColumnSearch('tblPRODUCTS', this, 5);" class="form-control form-control-sm" id="txtFnd_Product_Rate" placeholder="search">
-                                 </th>
-                              </tr>
-                           </thead>
-                           <tbody id="tBodyPRODUCTS">
-                              <tr>
-                                 <td><span title="Edit" class="Edit fa-solid fa-pencil" style="cursor:pointer; color:#333333;padding:3px;" onclick="EditRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td><span title="Delete" class="Delete fa-solid fa-trash-can" style="cursor:pointer;color:#333333; padding:3px;" onclick="DeleteRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td>P01</td>
-                                 <td>Dell Inspiron</td>
-                                 <td>847321</td>
-                                 <td>47590</td>
-                              </tr>
-                              <tr>
-                                 <td><span title="Edit" class="Edit fa-solid fa-pencil" style="cursor:pointer; color:#333333;padding:3px;" onclick="EditRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td><span title="Delete" class="Delete fa-solid fa-trash-can" style="cursor:pointer;color:#333333; padding:3px;" onclick="DeleteRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td>P02</td>
-                                 <td>Dell Desktop</td>
-                                 <td>83014090</td>
-                                 <td>65000</td>
-                              </tr>
-                              <tr>
-                                 <td><span title="Edit" class="Edit fa-solid fa-pencil" style="cursor:pointer; color:#333333;padding:3px;" onclick="EditRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td><span title="Delete" class="Delete fa-solid fa-trash-can" style="cursor:pointer;color:#333333; padding:3px;" onclick="DeleteRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td>P03</td>
-                                 <td>HP Desktop</td>
-                                 <td>842381</td>
-                                 <td>45200</td>
-                              </tr>
-                              <tr>
-                                 <td><span title="Edit" class="Edit fa-solid fa-pencil" style="cursor:pointer; color:#333333;padding:3px;" onclick="EditRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td><span title="Delete" class="Delete fa-solid fa-trash-can" style="cursor:pointer;color:#333333; padding:3px;" onclick="DeleteRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td>P04</td>
-                                 <td>IBM Laptop</td>
-                                 <td>954142</td>
-                                 <td>45200</td>
-                              </tr>
-                              <tr>
-                                 <td><span title="Edit" class="Edit fa-solid fa-pencil" style="cursor:pointer; color:#333333;padding:3px;" onclick="EditRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td><span title="Delete" class="Delete fa-solid fa-trash-can" style="cursor:pointer;color:#333333; padding:3px;" onclick="DeleteRecord_PRODUCTS(this);">
-                                    </span>
-                                 </td>
-                                 <td>P05</td>
-                                 <td>Webcam</td>
-                                 <td>850450</td>
-                                 <td>5000</td>
-                              </tr>
-                           </tbody>
-                        </table>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="divHead_Accordion11">
+                     <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                        data-bs-target="#btnAccord_Accordion11">Tablular View</button>
+                  </h2>
+                  <div id="btnAccord_Accordion11" class="accordion-collapse collapse show">
+                     <div class="accordion-body" id="AccordBody_Accordion11">
+                        <div class="table-responsive">
+                           <table id="tblPRODUCTS" class="col-md-12 sortable-table table table-striped table-hover">
+                              <thead class="text-center">
+                                 <tr>
+
+                                    <th onclick="SortTable('tblPRODUCTS',2);">Product Code <i class="fa fa-sort"
+                                          aria-hidden="true">
+                                       </i>
+                                    </th>
+                                    <th onclick="SortTable('tblPRODUCTS',3);">Product Name <i class="fa fa-sort"
+                                          aria-hidden="true">
+                                       </i>
+                                    </th>
+                                    <th onclick="SortTable('tblPRODUCTS',4);">Hsn Code <i class="fa fa-sort"
+                                          aria-hidden="true">
+                                       </i>
+                                    </th>
+                                    <th onclick="SortTable('tblPRODUCTS',5);">Product Rate <i class="fa fa-sort"
+                                          aria-hidden="true">
+                                       </i>
+                                    </th>
+                                    <th>
+                                       Action
+                                    </th>
+                                 </tr>
+                                 <tr>
+
+                                    <th>
+                                       <input type="search" oninput="ColumnSearch('tblPRODUCTS', this, 2);"
+                                          class="form-control form-control-sm" id="txtFnd_Product_Code"
+                                          placeholder="search">
+                                    </th>
+                                    <th>
+                                       <input type="search" oninput="ColumnSearch('tblPRODUCTS', this, 3);"
+                                          class="form-control form-control-sm" id="txtFnd_Product_Name"
+                                          placeholder="search">
+                                    </th>
+                                    <th>
+                                       <input type="search" oninput="ColumnSearch('tblPRODUCTS', this, 4);"
+                                          class="form-control form-control-sm" id="txtFnd_HSN_Code"
+                                          placeholder="search">
+                                    </th>
+                                    <th>
+                                       <input type="search" oninput="ColumnSearch('tblPRODUCTS', this, 5);"
+                                          class="form-control form-control-sm" id="txtFnd_Product_Rate"
+                                          placeholder="search">
+                                    </th>
+                                    <th></th>
+                                 </tr>
+                              </thead>
+                              <tbody id="tBodyPRODUCTS">
+                                 <tr>
+
+                                    <td>P01</td>
+                                    <td>Dell Inspiron</td>
+                                    <td>847321</td>
+                                    <td>47590</td>
+                                    <td><span title="Edit" class="Edit fa-solid fa-pencil edit-pencil"
+                                          onclick="EditRecord_PRODUCTS(this);">
+                                       </span>
+                                       <span title="Delete" class="Delete fa-solid fa-trash-can delete-pencil"
+                                          onclick="DeleteRecord_PRODUCTS(this);">
+                                       </span>
+                                    </td>
+
+                                 </tr>
+                                 <tr>
+
+                                    <td>P02</td>
+                                    <td>Dell Desktop</td>
+                                    <td>83014090</td>
+                                    <td>65000</td>
+                                   <td><span title="Edit" class="Edit fa-solid fa-pencil edit-pencil"
+                                          onclick="EditRecord_PRODUCTS(this);">
+                                       </span>
+                                       <span title="Delete" class="Delete fa-solid fa-trash-can delete-pencil"
+                                          onclick="DeleteRecord_PRODUCTS(this);">
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+
+                                    <td>P03</td>
+                                    <td>HP Desktop</td>
+                                    <td>842381</td>
+                                    <td>45200</td>
+                                   <td><span title="Edit" class="Edit fa-solid fa-pencil edit-pencil"
+                                          onclick="EditRecord_PRODUCTS(this);">
+                                       </span>
+                                       <span title="Delete" class="Delete fa-solid fa-trash-can delete-pencil"
+                                          onclick="DeleteRecord_PRODUCTS(this);">
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+
+                                    <td>P04</td>
+                                    <td>IBM Laptop</td>
+                                    <td>954142</td>
+                                    <td>45200</td>
+                                   <td><span title="Edit" class="Edit fa-solid fa-pencil edit-pencil"
+                                          onclick="EditRecord_PRODUCTS(this);">
+                                       </span>
+                                       <span title="Delete" class="Delete fa-solid fa-trash-can delete-pencil"
+                                          onclick="DeleteRecord_PRODUCTS(this);">
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+
+                                    <td>P05</td>
+                                    <td>Webcam</td>
+                                    <td>850450</td>
+                                    <td>5000</td>
+                                   <td><span title="Edit" class="Edit fa-solid fa-pencil edit-pencil"
+                                          onclick="EditRecord_PRODUCTS(this);">
+                                       </span>
+                                       <span title="Delete" class="Delete fa-solid fa-trash-can delete-pencil"
+                                          onclick="DeleteRecord_PRODUCTS(this);">
+                                       </span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -929,68 +1067,69 @@
       <footer class="" id="FOOTER">
       </footer>
       <script type="text/javascript" id="SCRIPT">
-         function ToggleLeftSideBar(){
-           try {
+         function ToggleLeftSideBar() {
+            try {
                var ele = document.getElementById("sidebarleft");
-               if(ele.classList.contains("active")){
-                   var sMargin="-" + window.getComputedStyle(ele).getPropertyValue('width');
-                   ele.style.marginLeft = sMargin;
-                   ele.classList.remove("active");
+               if (ele.classList.contains("active")) {
+                  var sMargin = "-" + window.getComputedStyle(ele).getPropertyValue('width');
+                  ele.style.marginLeft = sMargin;
+                  ele.classList.remove("active");
                } else {
-                   ele.style.marginLeft = 0;
-                   ele.classList.add("active");
+                  ele.style.marginLeft = 0;
+                  ele.classList.add("active");
                }
-           } catch {}
+            } catch { }
          }
-         
-         
-         
+
+
+
          if (window.matchMedia("(min-width: 768px)").matches) {
             $("#carousel").removeClass("slide");
             var carousel_scrollPosition = 0;
             $("#btnNext").on("click", function () {
-            var carouselWidth = $("#carousel .carousel-inner")[0].scrollWidth;
-            var cardWidth = $("#carousel .carousel-item").width();
-            var padLeft = parseInt($("#carousel .carousel-item").css('padding-left'));
-            var padRight = parseInt($("#carousel .carousel-item").css('padding-right'));
-            var iPadd = parseInt(padLeft) + parseInt(padRight);
-            var cardSlide = Math.ceil((cardWidth  + parseInt(iPadd)) * 1);
-            var iMax = carouselWidth - ((cardWidth + iPadd) * 3);
-            if (carousel_scrollPosition < iMax ) {
-               carousel_scrollPosition += cardSlide;
-               if(carousel_scrollPosition > iMax){
-               carousel_scrollPosition = iMax;
+               var carouselWidth = $("#carousel .carousel-inner")[0].scrollWidth;
+               var cardWidth = $("#carousel .carousel-item").width();
+               var padLeft = parseInt($("#carousel .carousel-item").css('padding-left'));
+               var padRight = parseInt($("#carousel .carousel-item").css('padding-right'));
+               var iPadd = parseInt(padLeft) + parseInt(padRight);
+               var cardSlide = Math.ceil((cardWidth + parseInt(iPadd)) * 1);
+               var iMax = carouselWidth - ((cardWidth + iPadd) * 3);
+               if (carousel_scrollPosition < iMax) {
+                  carousel_scrollPosition += cardSlide;
+                  if (carousel_scrollPosition > iMax) {
+                     carousel_scrollPosition = iMax;
+                  }
+                  $("#carousel .carousel-inner").animate(
+                     { scrollLeft: carousel_scrollPosition },
+                     600
+                  );
                }
-               $("#carousel .carousel-inner").animate(
-               { scrollLeft: carousel_scrollPosition },
-               600
-               );
-            } 
             });
             $("#btnPrev").on("click", function () {
-            var carouselWidth = $("#carousel .carousel-inner")[0].scrollWidth;
-            var cardWidth = $("#carousel .carousel-item").width();
-            var padLeft = parseInt($("#carousel .carousel-item").css('padding-left'));
-            var padRight = parseInt($("#carousel .carousel-item").css('padding-right'));
-            var iPadd = parseInt(padLeft) + parseInt(padRight);
-            var cardSlide = Math.floor(cardWidth * 1) + parseInt(iPadd);
-            var cardSlide = Math.ceil((cardWidth  + parseInt(iPadd)) * 1);
-            if (carousel_scrollPosition > 0) {
-               carousel_scrollPosition -= cardSlide;
-               if(carousel_scrollPosition < 0){
-               carousel_scrollPosition=0;
-            }
-            $("#carousel .carousel-inner").animate(
-            { scrollLeft: carousel_scrollPosition },
-            600
-            );
-            }
+               var carouselWidth = $("#carousel .carousel-inner")[0].scrollWidth;
+               var cardWidth = $("#carousel .carousel-item").width();
+               var padLeft = parseInt($("#carousel .carousel-item").css('padding-left'));
+               var padRight = parseInt($("#carousel .carousel-item").css('padding-right'));
+               var iPadd = parseInt(padLeft) + parseInt(padRight);
+               var cardSlide = Math.floor(cardWidth * 1) + parseInt(iPadd);
+               var cardSlide = Math.ceil((cardWidth + parseInt(iPadd)) * 1);
+               if (carousel_scrollPosition > 0) {
+                  carousel_scrollPosition -= cardSlide;
+                  if (carousel_scrollPosition < 0) {
+                     carousel_scrollPosition = 0;
+                  }
+                  $("#carousel .carousel-inner").animate(
+                     { scrollLeft: carousel_scrollPosition },
+                     600
+                  );
+               }
             });
          } else {
-         $("#carousel").addClass("slide");
+            $("#carousel").addClass("slide");
          }
-         
+
       </script>
       <script src="assets/bootstrap-5.2.1-dist/js/bootstrap-select.min.js" defer></script>
-   </body>
+</body>
+
 </html>

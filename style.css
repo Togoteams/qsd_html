@@ -1,0 +1,172 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif!important;
+}
+
+@media (min-width: 768px) {
+    #carousel .carousel-item {
+        margin-right: 0;
+        flex: 0 0 33.33%;
+        display: grid;
+        padding: 0 15px 0 15px;
+    }
+
+    .carousel-inner {
+        display: flex;
+    }
+}
+
+.navbar {
+    color: #fff;
+}
+
+.sidebar {
+    background: #fff;
+    color: #000;
+    transition: all 0.3s;
+    position: sticky;
+    top: 56px;
+    width: 100%;
+}
+
+.sidebar.active {
+    margin-left: -250px;
+}
+
+.sidebar .sidebar-header {
+    padding: 20px;
+    background: #fff;
+}
+
+.sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+.sidebar ul p {
+    color: #000;
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+    color: #fff;
+    background: #000;
+}
+
+.sidebar ul li.active>a,
+.sidebar a[aria-expanded="true"] {
+    color: #fff;
+    background: #000;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.sidebar .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    padding-bottom: 20px;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #fff;
+}
+
+ul ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 50px !important;
+    background: #fff;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#dvwrapper {
+    display: flex;
+}
+
+#sidebarleft {
+    min-width: 200px;
+    max-width: 250px;
+    position: sticky;
+    transition: all 0.3s;
+    box-shadow: 4px 6px 12px rgb(0 0 0 / 7%);
+}
+
+#sidebarCollapseLeft {
+    margin-left: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .toggle-btn {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {}
+
+.toggle-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    display: none;
+}
+
+.firstfrom{
+    background: #fff;
+    padding: 30px;
+}
+.col-form-label{
+    margin-top: 10px;
+    
+}
+
+.edit-pencil{
+
+    color: #084298!important;
+    border-radius: 3px;
+    padding: 6px;
+    background: #edf4ff;
+    font-size: 12px;
+}
+
+.delete-pencil{
+    color: #ae0a0a!important;
+    border-radius: 3px;
+    padding: 6px;
+    background: #ffedee;
+    font-size: 12px;
+
+}
+
+
+.btn-primary {
+    border-radius: 3px!important;
+}
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    overflow: hidden;
+    color: #000;
+}
