@@ -113,6 +113,7 @@ hr {
 @media only screen and (max-width: 480px){
   .breadcrumb li a,
   .breadcrumb li:last-child{ padding: 5px 10px; }
+  
 }
 @media only screen and (max-width: 360px){
   .breadcrumb li a,
@@ -338,8 +339,8 @@ hr {
 }
 .sidebar ul li.active>a,
 a[aria-expanded="true"] {
-  color: #fff !important;
-  background: rgb(182 211 255 / 25%) !important
+  /* color: #fff !important;
+  background: rgb(182 211 255 / 25%) !important */
 }
 ul ul a {
   background: #ffffff !important;
