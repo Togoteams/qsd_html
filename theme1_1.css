@@ -121,6 +121,9 @@ hr {
       font-size: 12px;
       padding: 5px;
   }
+  .btn-closee{
+    display: block;
+}
 }
 /* End of Breadcrumbs */
 
